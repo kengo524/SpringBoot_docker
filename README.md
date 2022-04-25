@@ -15,7 +15,8 @@
 
 ## web サーバー立ち上げ
 
-- docker-compose exec app java -jar build/libs/api-0.0.1-SNAPSHOT.jar
+- ls build/libs にて出力された名前にplainがないjarファイルの名前をコピー
+- docker-compose exec app java -jar build/libs/コピーしたファイル名を貼り付け。
 
 ## 画面確認
 
