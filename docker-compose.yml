@@ -8,3 +8,21 @@ services:
     volumes:
       - ./server:/srv:cached
     working_dir: /srv
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13.1
+    container_name: db
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_DB: "dev"
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbvol:/var/lib/postgresql/data
+      - ./forDocker/db/initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  dbvol:
