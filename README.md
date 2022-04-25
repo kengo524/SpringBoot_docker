@@ -15,7 +15,7 @@
 
 ## web サーバー立ち上げ
 
-- ls build/libs にて出力された名前にplainがないjarファイルの名前をコピー
+- ls server/build/libs にて出力された名前に plain がない jar ファイルの名前をコピー
 - docker-compose exec app java -jar build/libs/コピーしたファイル名を貼り付け。
 
 ## 画面確認
