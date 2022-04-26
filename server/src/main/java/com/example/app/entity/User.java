@@ -14,8 +14,6 @@ public class User {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
-  private String email;
-  private String inquiry_information;
 
   protected User() {
   }
@@ -40,24 +38,24 @@ public class User {
     this.name = name;
   }
 
-  public String getEmail() {
-    return email;
-  }
+  // public String getEmail() {
+  // return email;
+  // }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+  // public void setEmail(String email) {
+  // this.email = email;
+  // }
 
-  public String getInquiryInformation() {
-    return inquiry_information;
-  }
+  // public String getInquiryInformation() {
+  // return inquiry_information;
+  // }
 
-  public void setInquiryInformation(String inquiry_information) {
-    this.inquiry_information = inquiry_information;
-  }
+  // public void setInquiryInformation(String inquiry_information) {
+  // this.inquiry_information = inquiry_information;
+  // }
 
   @Override
   public String toString() {
-    return String.format("{id:%d,name:%s,email:%s,inquiry_information:%s}", id, name, email, inquiry_information);
+    return String.format("{id:%d,name:%s}", id, name);
   }
 }
