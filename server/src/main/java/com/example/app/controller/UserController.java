@@ -2,10 +2,12 @@ package com.example.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
 import com.example.app.repository.UserRepository;
 
-@RestController
+@Controller
 public class UserController {
 
   private final UserRepository repository;
@@ -16,7 +18,9 @@ public class UserController {
   }
 
   @RequestMapping("/users")
-  public String user() {
-    return String.valueOf(repository.findAll());
+  public String users(Model model) {
+    model.addAttribute("users", repository.findAll());
+    return "users";
   }
+
 }

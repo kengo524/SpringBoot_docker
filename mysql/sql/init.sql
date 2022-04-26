@@ -11,4 +11,3 @@ INSERT INTO users (
 ) values ( 
   'test'
 );
-
