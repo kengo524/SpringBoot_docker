@@ -22,6 +22,9 @@ public class User {
   @Column(name = "email")
   private String email;
 
+  @Column(name = "inquiry")
+  private String inquiry;
+
   public Long getId() {
     return id;
   }
@@ -46,16 +49,16 @@ public class User {
     this.email = email;
   }
 
-  // public String getInquiryInformation() {
-  // return inquiry_information;
-  // }
+  public String getInquiry() {
+    return inquiry;
+  }
 
-  // public void setInquiryInformation(String inquiry_information) {
-  // this.inquiry_information = inquiry_information;
-  // }
+  public void setInquiry(String inquiry) {
+    this.inquiry = inquiry;
+  }
 
   @Override
   public String toString() {
-    return String.format("{id:%d,name:%s,email:%s}", id, name, email);
+    return String.format("{id:%d,name:%s,email:%s,inquiry:%s}", id, name, email, inquiry);
   }
 }
