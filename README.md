@@ -5,18 +5,9 @@
 - git clone
 - cd spring_boot
 
-## コンテナ起動
+## コンテナ起動&web サーバー立ち上げ
 
-- docker-compose up -d
-
-## ビルド
-
-- docker-compose exec app sh gradlew build
-
-## web サーバー立ち上げ
-
-- ls server/build/libs にて出力された名前に plain がない jar ファイルの名前をコピー
-- docker-compose exec app java -jar build/libs/コピーしたファイル名を貼り付け。
+- docker-compose up --build
 
 ## 画面確認
 
@@ -24,4 +15,9 @@
 
 ## コンテナ停止
 
+- Ctr + C
 - docker-compose down
+
+## ログファイルの出力先
+
+- server/logs/spring.log
