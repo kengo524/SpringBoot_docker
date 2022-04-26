@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Column;
 
 @Entity
 @Table(name = "users")
@@ -12,15 +13,14 @@ public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id")
   private Long id;
+
+  @Column(name = "name")
   private String name;
 
-  protected User() {
-  }
-
-  public User(String name) {
-    this.name = name;
-  }
+  @Column(name = "email")
+  private String email;
 
   public Long getId() {
     return id;
@@ -38,13 +38,13 @@ public class User {
     this.name = name;
   }
 
-  // public String getEmail() {
-  // return email;
-  // }
+  public String getEmail() {
+    return email;
+  }
 
-  // public void setEmail(String email) {
-  // this.email = email;
-  // }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
   // public String getInquiryInformation() {
   // return inquiry_information;
@@ -56,6 +56,6 @@ public class User {
 
   @Override
   public String toString() {
-    return String.format("{id:%d,name:%s}", id, name);
+    return String.format("{id:%d,name:%s,email:%s}", id, name, email);
   }
 }
