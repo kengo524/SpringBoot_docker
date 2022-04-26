@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.example.app.entity.User;
 import com.example.app.repository.UserRepository;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
 
@@ -18,10 +20,9 @@ public class UserService {
     return userRepository.findAll();
   }
 
-  // 保留後で実装する
-  // public User findOne(Long id) {
-  // return userRepository.findById(id);
-  // }
+  public Optional<User> findOne(Long id) {
+    return userRepository.findById(id);
+  }
 
   public User save(User user) {
     return userRepository.save(user);

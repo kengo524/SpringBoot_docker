@@ -37,7 +37,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Optional;
 import com.example.app.entity.User;
 import com.example.app.service.UserService;
 
@@ -66,17 +68,30 @@ public class UserController {
   // return "users/edit";
   // }
 
-  // @GetMapping("{id}")
-  // public String show(@PathVariable Long id, Model model) {
-  // User player = userService.findOne(id);
-  // model.addAttribute("player", player);
-  // return "users/show";
-  // }
+  @GetMapping("{id}")
+  public String show(@PathVariable Long id, Model model) {
+    Optional<User> user = userService.findOne(id);
+    model.addAttribute("user", user);
+    return "users/show";
+  }
+
+  @PostMapping("confirm")
+  public String confirm(
+      @RequestParam String name,
+      @RequestParam String email,
+      @RequestParam String inquiry,
+
+      Model model) {
+    model.addAttribute("name", name);
+    model.addAttribute("email", email);
+    model.addAttribute("inquiry", inquiry);
+    return "users/confirm";
+  }
 
   @PostMapping
   public String create(@ModelAttribute User user) {
     userService.save(user);
-    return "redirect:/users";
+    return "users/complete";
   }
 
   // @PutMapping("{id}")
