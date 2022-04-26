@@ -14,17 +14,16 @@ services:
       - db
 
   db:
-    image: postgres:13.1
-    container_name: db
-    environment:
-      POSTGRES_USER: "root"
-      POSTGRES_PASSWORD: "password"
-      POSTGRES_DB: "dev"
+    image: mysql:8
+    container_name: "db"
     ports:
-      - "5432:5432"
+    - "3306:3306"
     volumes:
-      - dbvol:/var/lib/postgresql/data
-      - ./forDocker/db/initdb:/docker-entrypoint-initdb.d
-
-volumes:
-  dbvol:
+    - ./mysql/sql/:/docker-entrypoint-initdb.d
+    - ./mysql/settings/:/var/lib/mysql
+    - ./mysql/sql/mysql.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      MYSQL_DATABASE: "sample"
+      MYSQL_ROOT_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      TZ: "Asia/Tokyo"
