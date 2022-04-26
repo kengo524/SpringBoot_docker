@@ -7,7 +7,7 @@
 
 ## コンテナ起動&web サーバー立ち上げ
 
-- docker-compose up -d
+- docker-compose up --build
 
 ## 画面確認
 
@@ -18,6 +18,6 @@
 - Ctr + C
 - docker-compose down
 
-
 ## ログファイルの出力先
+
 - server/logs/spring.log
