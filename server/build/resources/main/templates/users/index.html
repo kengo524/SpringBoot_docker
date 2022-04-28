@@ -16,7 +16,7 @@
     <div class="container">
       <h2>一覧画面</h2>
       <div th:if="${users.size() == 0}">登録データが1件もありません。</div>
-      <table class="table" th:if="${users.size() >= 1}">
+      <table class="table table-striped" th:if="${users.size() >= 1}">
         <thead>
           <tr>
             <th>id</th>
