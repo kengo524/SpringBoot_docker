@@ -1,6 +1,6 @@
 package com.example.app.hello;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,6 +27,6 @@ public class HelloControllerTests {
     @Test
     void index処理でモデルのメッセージにHelloworldが渡される() throws Exception {
         this.mockMvc.perform(get("/"))
-                .andExpect(model().attribute("message", "Hello world!!."));
+                .andExpect(model().attribute("message", "Hello World!!."));
     }
 }

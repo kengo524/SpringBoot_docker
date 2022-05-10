@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserControllerTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserControllerTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.app.user.html">com.example.app.user</a> &gt; UserControllerTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.470s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">index処理でviewとしてindexが渡される()</td>
+<td class="success">0.244s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">new処理でviewとしてnewが渡される()</td>
+<td class="success">0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">フォームの入力値に対する確認画面へ()</td>
+<td class="success">0.170s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-05-10 08:23:37.438  INFO 4439 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.app.user.UserControllerTests], using SpringBootContextLoader
+2022-05-10 08:23:37.453  INFO 4439 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.app.user.UserControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-05-10 08:23:37.454  INFO 4439 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.app.user.UserControllerTests]: UserControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-05-10 08:23:37.567  INFO 4439 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.app.AppApplication for test class com.example.app.user.UserControllerTests
+2022-05-10 08:23:37.589  INFO 4439 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-05-10 08:23:37.590  INFO 4439 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2625eb84, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d2a164e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3725471, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@35216a2e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c51dec5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51a42767, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40e420fe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7eaa52d6, org.springframework.test.context.event.EventPublishingTestExecutionListener@4cbf1c30, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3c5095df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d52a17b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71c264e5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4528a871, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7d6e2366, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@357f0cc9]
+2022-05-10 08:23:37.625 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#index(Model)
+2022-05-10 08:23:37.627 TRACE 4439 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2022-05-10 08:23:37.634 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-10 08:23:37.635 DEBUG 4439 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-10 08:23:37.866 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#newUser(Model)
+2022-05-10 08:23:37.867 TRACE 4439 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2022-05-10 08:23:37.867 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-10 08:23:37.868 DEBUG 4439 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-10 08:23:37.925 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#confirm(String, String, String, Model)
+2022-05-10 08:23:38.036 TRACE 4439 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [テスト, test@test, テストです。, {}]
+2022-05-10 08:23:38.037 TRACE 4439 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-10 08:23:38.038 DEBUG 4439 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at May 10, 2022, 8:23:38 AM</p>
+</div>
+</div>
+</body>
+</html>
