@@ -70,12 +70,12 @@ public class UserController {
   // return "users/edit";
   // }
 
-  @GetMapping("{id}")
-  public String show(@PathVariable Long id, Model model) {
-    Optional<User> user = userService.findOne(id);
-    model.addAttribute("user", user);
-    return "users/show";
-  }
+  // @GetMapping("{id}")
+  // public String show(@PathVariable Long id, Model model) {
+  // Optional<User> user = userService.findOne(id);
+  // model.addAttribute("user", user);
+  // return "users/show";
+  // }
 
   @PostMapping("confirm")
   public String confirm(
@@ -113,9 +113,9 @@ public class UserController {
   // player.setId(id);
   // ; return }
 
-  @DeleteMapping("{id}")
-  public String destroy(@PathVariable Long id) {
-    userService.delete(id);
-    return "redirect:/users";
-  }
+  // @DeleteMapping("{id}")
+  // public String destroy(@PathVariable Long id) {
+  // userService.delete(id);
+  // return "redirect:/users";
+  // }
 }

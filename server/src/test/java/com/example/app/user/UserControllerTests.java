@@ -13,8 +13,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import javax.transaction.Transactional;
+
 @SpringBootTest
 @AutoConfigureMockMvc
+@Transactional
 
 public class UserControllerTests {
     private static final Object User = null;
@@ -48,6 +51,17 @@ public class UserControllerTests {
                 .andExpect(view().name("users/confirm"));
     }
 
-    // // フォーム入力にかかるテストを以下入力。
+    @Test
+    void complete処理でviewとしてcompleteが渡される() throws Exception {
+        this.mockMvc
+                .perform((post("/users"))
+                        .param("name", "completeテスト")
+                        .param("email", "test@test")
+                        .param("inquiry", "テストです。"))
+                .andExpect(status().isOk())
+                .andExpect(model().hasNoErrors())
+                .andExpect(model().attribute("User", User))
+                .andExpect(view().name("users/complete"));
+    }
 
 }
