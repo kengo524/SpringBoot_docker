@@ -30,6 +30,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -68,12 +70,12 @@ public class UserController {
   // return "users/edit";
   // }
 
-  @GetMapping("{id}")
-  public String show(@PathVariable Long id, Model model) {
-    Optional<User> user = userService.findOne(id);
-    model.addAttribute("user", user);
-    return "users/show";
-  }
+  // @GetMapping("{id}")
+  // public String show(@PathVariable Long id, Model model) {
+  // Optional<User> user = userService.findOne(id);
+  // model.addAttribute("user", user);
+  // return "users/show";
+  // }
 
   @PostMapping("confirm")
   public String confirm(
@@ -88,6 +90,18 @@ public class UserController {
     return "users/confirm";
   }
 
+  // // 問い合わせ送信、確認画面へ
+  // @PostMapping("/confirm")
+  // // バリデーション済みの値を取得
+  // public String confirm(@Validated ContactForm contactForm, BindingResult
+  // result) {
+  // if (result.hasErrors()) {
+  // // 入力エラーがあった場合
+  // return "users";
+  // }
+  // return "confirm";
+  // }
+
   @PostMapping
   public String create(@ModelAttribute User user) {
     userService.save(user);
@@ -99,9 +113,9 @@ public class UserController {
   // player.setId(id);
   // ; return }
 
-  @DeleteMapping("{id}")
-  public String destroy(@PathVariable Long id) {
-    userService.delete(id);
-    return "redirect:/users";
-  }
+  // @DeleteMapping("{id}")
+  // public String destroy(@PathVariable Long id) {
+  // userService.delete(id);
+  // return "redirect:/users";
+  // }
 }
