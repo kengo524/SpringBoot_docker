@@ -37,7 +37,7 @@ public class DBSelectTest {
     private UserService userService;
 
     @Test
-    public void contextLoads() throws Exception {
+    public void DBからレコードを取得() throws Exception {
         List<User> userList = userService.findAll();
 
         // 正常にテーブルからレコードを取得できたか
