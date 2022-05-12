@@ -96,5 +96,4 @@ public class CombineTests {
                 List<User> userListAfter = userService.findAll();
                 assertThat(userListAfter.size(), is(3));
         }
-
 }
